@@ -3,9 +3,8 @@
 namespace jycr753\PasswordStrengthChecker;
 
 abstract class RepeatInStringAbstract {
-    public abstract function doesChartRepeats();
-    public abstract function doesHasSequentialChars();
-    public abstract function doesHasSequentialNumbers();
-    public abstract function doesHasSequentialUpperCase();
-    public abstract function doesHasSequentialLowerCase();
+    public abstract function doesHasSequentialChars(array $password);
+    public abstract function doesHasSequentialNumbers(array $password);
+    public abstract function doesHasSequentialUpperCase(array $password);
+    public abstract function doesHasSequentialLowerCase(array $password);
 }
