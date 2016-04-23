@@ -1,30 +1,57 @@
 <?php
 namespace jycr753\PasswordStrengthChecker;
 
-class CountInString extends CountInStringAbstract{
+class CountInString extends CountInStringAbstract {
 
-    public function countLength()
+    public function countLength( array $password )
     {
-        // TODO: Implement countLength() method.
+        return ( $password[ 'length' ] * 4 );
     }
 
-    public function countLowerCase()
+    public function countLowerCase( array $password )
     {
-        // TODO: Implement countLowerCase() method.
+        preg_match_all( '/[a-z]{1}/', $password[ 'raw' ], $matches );
+        if ( isset( $matches[ 0 ] ) ) {
+            if ( implode( '', $matches[ 0 ] ) == $password[ 'raw' ] ) {
+                return 0;
+            }
+
+            return ( strlen( $password[ 'raw' ] ) - count( $matches[ 0 ] ) ) * 2;
+        }
+
+        return 0;
     }
 
-    public function countNumbers()
+    public function countNumbers( array $password )
     {
-        // TODO: Implement countNumbers() method.
+        preg_match_all( '/[0-9]{1}/', $password[ 'raw' ], $matches );
+        if ( isset( $matches[ 0 ] ) ) {
+            if ( implode( '', $matches[ 0 ] ) == $password[ 'raw' ] ) {
+                return 0;
+            }
+
+            return count( $matches[ 0 ] ) * 4;
+        }
+
+        return 0;
     }
 
-    public function countSymbols()
+    public function countSymbols( array $password )
     {
-        // TODO: Implement countSymbols() method.
+        return ( $password[ 'symbol' ][ 'count' ] * 6 );
     }
 
-    public function countUpperCase()
+    public function countUpperCase( array $password )
     {
-        // TODO: Implement countUpperCase() method.
+        preg_match_all( '/[A-Z]{1}/', $password[ 'raw' ], $matches );
+        if ( isset( $matches[ 0 ] ) ) {
+            if ( implode( '', $matches[ 0 ] ) == $password[ 'raw' ] ) {
+                return 0;
+            }
+
+            return ( strlen( $password[ 'raw' ] ) - count( $matches[ 0 ] ) ) * 2;
+        }
+
+        return 0;
     }
 }

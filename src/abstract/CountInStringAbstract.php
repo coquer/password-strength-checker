@@ -2,9 +2,9 @@
 namespace jycr753\PasswordStrengthChecker;
 
 abstract class CountInStringAbstract {
-    public abstract function countLength();
-    public abstract function countLowerCase();
-    public abstract function countNumbers();
-    public abstract function countSymbols();
-    public abstract function countUpperCase();
+    public abstract function countLength(array $password);
+    public abstract function countLowerCase(array $password);
+    public abstract function countNumbers(array $password);
+    public abstract function countSymbols(array $password);
+    public abstract function countUpperCase(array $password);
 }
