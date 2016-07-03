@@ -57,7 +57,7 @@ All issues are welcome, to create a better product, but your issue should contai
 All bug fixes should be sent to the develop branch. Bug fixes should never be sent to the master
 
 ### Security Vulnerabilities
-If you discover a security vulnerability within this package, write an email to Ageras developer@jorgerodriguez.dk .
+If you discover a security vulnerability within this package, write an email to developer@jorgerodriguez.dk .
 
 ### Coding Style
 Our projects follows the PSR-2 coding standard and the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) autoloading standard.
