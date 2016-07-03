@@ -9,19 +9,19 @@ use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 class ServiceProvider extends IlluminateServiceProvider
 {
     /**
-     * Score for given password
+     * Score for given password.
      * @var int
      */
     private $score;
 
     /**
-     * Functions to evaluate
+     * Functions to evaluate.
      * @var array
      */
     private $order;
 
     /**
-     * Message response
+     * Message response.
      * @var string
      */
     private $messages;
@@ -33,7 +33,7 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     public function boot()
     {
-        $path = realpath(__DIR__.'/../config/password_strength.php');
+        $path = realpath(__DIR__ . '/../config/password_strength.php');
 
         $this->publishes([$path => config_path('password_strength.php')], 'config');
         $this->mergeConfigFrom($path, 'password_strength');
