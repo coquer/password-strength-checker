@@ -23,7 +23,7 @@ class RepeatInString extends RepeatInStringAbstract
     public function doesHasSequentialNumbers(array $password)
     {
         preg_match_all('/[0-9]{2,}/', $password['raw'], $matches);
-        if (!empty($matches[0])) {
+        if (! empty($matches[0])) {
             $score = 0;
             foreach ($matches[0] as $match) {
                 $score -= (strlen($match) - 1) * 2;
@@ -38,7 +38,7 @@ class RepeatInString extends RepeatInStringAbstract
     public function doesHasSequentialUpperCase(array $password)
     {
         preg_match_all('/[A-Z]{2,}/', $password['raw'], $matches);
-        if (!empty($matches[0])) {
+        if (! empty($matches[0])) {
             $score = 0;
             foreach ($matches[0] as $match) {
                 $score -= (strlen($match) - 1) * 2;
@@ -53,7 +53,7 @@ class RepeatInString extends RepeatInStringAbstract
     public function doesHasSequentialLowerCase(array $password)
     {
         preg_match_all('/[a-z]{2,}/', $password['raw'], $matches);
-        if (!empty($matches[0])) {
+        if (! empty($matches[0])) {
             $score = 0;
             foreach ($matches[0] as $match) {
                 $score -= (strlen($match) - 1) * 2;
