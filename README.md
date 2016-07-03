@@ -21,12 +21,16 @@ Publish the configuration files to customize the package:
     
 ### Usage
 
+Import package in class
+
+   use jycr753\PasswordStrengthChecker\ServiceProvider as PSC;
+
 Method usage Sample:
  
     public function passwordCheck(Request $request)
     {
         $password = $request->get('password');
-        $score = PCI::check($password);
+        $score = PSC::check($password);
         return [$score];
     }
  
