@@ -1,4 +1,5 @@
 <?php
+
 return [
 
     /*
@@ -48,6 +49,6 @@ return [
         1 => 'Weak',
         2 => 'Fair',
         3 => 'Strong',
-        4 => 'Very Strong'
-    ]
+        4 => 'Very Strong',
+    ],
 ];

@@ -1,4 +1,5 @@
 <?php
+
 return [
     'order' => [
         'countLength',
@@ -14,6 +15,6 @@ return [
         'doesHasSequentialChars',
         'doesHasSequentialNumbers',
         'doesHasSequentialUpperCase',
-        'doesHasSequentialLowerCase'
-    ]
+        'doesHasSequentialLowerCase',
+    ],
 ];

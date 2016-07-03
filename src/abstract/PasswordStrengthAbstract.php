@@ -1,10 +1,16 @@
 <?php
+
 namespace jycr753\PasswordStrengthChecker;
 
-abstract class PasswordStrengthControllerAbstract {
-    public abstract function setPasswordScore($score);
-    public abstract function generatePasswordStrength($password);
-    public abstract function getPasswordData($password);
-    public abstract function getPasswordStrength();
-    public abstract function getPasswordScore();
+abstract class PasswordStrengthAbstract
+{
+    abstract public function setPasswordScore($score);
+
+    abstract public function generatePasswordStrength($password);
+
+    abstract public function getPasswordData($password);
+
+    abstract public function getPasswordStrength();
+
+    abstract public function getPasswordScore();
 }
