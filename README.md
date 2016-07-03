@@ -1,4 +1,9 @@
 # Strength Password Provider
+[![Latest Stable Version](https://poser.pugx.org/jycr753/password-strength-checker/v/stable)](https://packagist.org/packages/jycr753/password-strength-checker)
+[![Total Downloads](https://poser.pugx.org/jycr753/password-strength-checker/downloads)](https://packagist.org/packages/jycr753/password-strength-checker)
+[![Latest Unstable Version](https://poser.pugx.org/jycr753/password-strength-checker/v/unstable)](https://packagist.org/packages/jycr753/password-strength-checker)
+[![License](https://poser.pugx.org/jycr753/password-strength-checker/license)](https://packagist.org/packages/jycr753/password-strength-checker)
+[![Monthly Downloads](https://poser.pugx.org/jycr753/password-strength-checker/d/monthly)](https://packagist.org/packages/jycr753/password-strength-checker)
 
 ## Documentation
 ### Installation
