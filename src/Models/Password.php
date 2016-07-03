@@ -1,6 +1,6 @@
 <?php
 
-namespace jycr753\Models;
+namespace jycr753\PasswordStrengthChecker\Models;
 
 class Password
 {
@@ -15,4 +15,21 @@ class Password
         'strength',
         'text',
     ];
+
+    public function __construct(array $data = [])
+    {
+        $this->data = $data;
+    }
+
+    public function getAttribute($key)
+    {
+        if (in_array($key, $this->attributes)) {
+            return $this->data[$key];
+        }
+    }
+
+    public function __get($key)
+    {
+        return $this->getAttribute($key);
+    }
 }

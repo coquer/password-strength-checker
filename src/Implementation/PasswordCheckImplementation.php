@@ -157,4 +157,20 @@ class PasswordCheckImplementation extends PasswordCheckAbstract
 
         return 0;
     }
+
+    public function doesChartRepeats(array $password)
+    {
+        $score = 0;
+        $result = 0;
+        foreach ($password['list'] as $character => $count) {
+            if ($count > 1) {
+                $score += $count - 1;
+            }
+        }
+        if ($score > 0) {
+            $result -= (int) ($score / (strlen($password['raw']) - $score)) + 1;
+        }
+
+        return $result;
+    }
 }

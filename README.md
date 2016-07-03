@@ -1,6 +1,43 @@
 # Strength Password Provider
 
 ## Documentation
+### Installation
+To install run composer: 
+
+    jycr753/password-strength-checker
+
+Register the service provider: 
+
+    jycr753\PasswordStrengthChecker\ServiceProvider::class,
+    
+Publish the configuration files to customize the package:
+
+    php artisan vendor:publish --provider="Vendor\jycr753\PasswordStrengthChecker\ServiceProvider" --tag="config"
+    
+### Usage
+
+Method usage Sample:
+ 
+    public function passwordCheck(Request $request)
+    {
+        $password = $request->get('password');
+        $score = PCI::check($password);
+        return [$score];
+    }
+ 
+ Output sample:
+ 
+     [
+         {
+             "data": {
+                 "score": 104,
+                 "strength": 4,
+                 "text": "Very Strong"
+             }
+         }
+     ]
+
+### Configuration
 
 ## Contributing
 
