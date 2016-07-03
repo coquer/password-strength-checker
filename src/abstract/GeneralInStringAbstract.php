@@ -1,10 +1,14 @@
 <?php
+
 namespace jycr753\PasswordStrengthChecker;
 
-abstract class GeneralInStringAbstract {
-    public abstract function hasCharactersOnly(array $password);
-    public abstract function hasExtra(array $password);
-    public abstract function hasNumbersOnly(array $password);
-    public abstract function hasAnyNumberInTheMiddle(array $password);
+abstract class GeneralInStringAbstract
+{
+    abstract public function hasCharactersOnly(array $password);
 
+    abstract public function hasExtra(array $password);
+
+    abstract public function hasNumbersOnly(array $password);
+
+    abstract public function hasAnyNumberInTheMiddle(array $password);
 }
