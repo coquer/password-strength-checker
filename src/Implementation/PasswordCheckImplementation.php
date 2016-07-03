@@ -2,7 +2,7 @@
 
 namespace jycr753\PasswordStrengthChecker;
 
-class PasswordCheckImplementation extends CountInStringAbstract
+class PasswordCheckImplementation extends PasswordCheckAbstract
 {
     public function countLength(array $password)
     {
