@@ -9,7 +9,7 @@
 ### Installation
 To install run composer: 
 
-    jycr753/password-strength-checker
+    composer require jycr753/password-strength-checker
 
 Register the service provider: 
 
