@@ -1,31 +1,43 @@
-Strength Password Provider
-=======
+# Strength Password Provider
 
-Official Documentation
--------
+## Documentation
 
+## Contributing
 
-Contributing
--------
+### Bug Reports
+All issues are welcome, to create a better product, but your issue should contain a title and a clear description of the issue. You should also include as much relevant information as possible and a code sample that demonstrates the issue.
 
-Security Inspiration
--------
+### Which Branch?
+All bug fixes should be sent to the develop branch. Bug fixes should never be sent to the master
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Jorge Y. C. Rodriguez at iam@jorge.one. All security vulnerabilities will be promptly addressed.
+### Security Vulnerabilities
+If you discover a security vulnerability within Sherlock package, write an email to Ageras' development team.
 
-License
--------
+### Coding Style
+Our projects follows the PSR-2 coding standard and the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) autoloading standard.
 
-	Copyright 2014 Jorge Rodriguez(jycr753)
+### StyleCI
+ StyleCI automatically fixes code style to match the standard.
 
-	Licensed under the Apache License, Version 2.0 (the "License");
-	you may not use this file except in compliance with the License.
-	You may obtain a copy of the License at
+## License
 
-	   http://www.apache.org/licenses/LICENSE-2.0
-
-	Unless required by applicable law or agreed to in writing, software
-	distributed under the License is distributed on an "AS IS" BASIS,
-	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	See the License for the specific language governing permissions and
-	limitations under the License.
+	Copyright 2016 Jorge Rodriguez(jycr753) and other contributors:
+	
+	Permission is hereby granted, free of charge, to any person 
+	obtaining a copy of this software and associated documentation 
+	files (the "Software"), to deal in the Software without restriction, 
+	including without limitation the rights to use, copy, modify, merge,
+	publish, distribute, sublicense, and/or sell copies of the Software, 
+	and to permit persons to whom the Software is furnished to do so, 
+	subject to the following conditions:
+	
+	The above copyright notice and this permission notice shall be included 
+	in all copies or substantial portions of the Software.
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS 
+	OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL 
+	THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR 
+	OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+	ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR 
+	OTHER DEALINGS IN THE SOFTWARE.

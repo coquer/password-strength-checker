@@ -9,6 +9,18 @@
             "email": "developer@jorgerodriguez.dk"
         }
     ],
-    "minimum-stability": "beta",
-    "require": {}
+	"require": {
+	  "illuminate/support": "^5.2",
+	  "vlucas/phpdotenv": "^2.2"
+	},
+	"autoload": {
+	  "psr-4": {
+		"jycr753\\PasswordStrengthChecker\\": "src/"
+	  }
+	},
+	"require-dev": {
+	  "phpspec/phpspec": "^2.5",
+	  "phpunit/phpunit": "^5.3",
+	  "orchestra/testbench": "^3.1"
+	}
 }
