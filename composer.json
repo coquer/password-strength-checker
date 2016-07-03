@@ -1,12 +1,15 @@
 {
     "name": "jycr753/password-strength-checker",
     "description": "Make a calculation so users can have a visual response to password input",
-    "keywords": ["password", "secure"],
+    "homepage": "https://github.com/jycr753/password-strength-checker",
+    "keywords": ["password", "secure password", "password strength", "password calculator", "strong passwords"],
     "license": "MIT",
     "authors": [
         {
             "name": "Jorge Y. C. Rodriguez",
-            "email": "developer@jorgerodriguez.dk"
+            "email": "developer@jorgerodriguez.dk",
+            "homepage": "http://www.blog.jorgerodriguez.dk",
+            "role": "Developer"
         }
     ],
 	"require": {
