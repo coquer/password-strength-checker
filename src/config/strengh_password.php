@@ -51,4 +51,21 @@ return [
         3 => 'Strong',
         4 => 'Very Strong',
     ],
+
+    'order' => [
+        'countLength',
+        'countLowerCase',
+        'countNumbers',
+        'countSymbols',
+        'countUpperCase',
+        'hasCharactersOnly',
+        'hasExtra',
+        'hasNumbersOnly',
+        'hasAnyNumberInTheMiddle',
+        'doesChartRepeats',
+        'doesHasSequentialChars',
+        'doesHasSequentialNumbers',
+        'doesHasSequentialUpperCase',
+        'doesHasSequentialLowerCase',
+    ],
 ];

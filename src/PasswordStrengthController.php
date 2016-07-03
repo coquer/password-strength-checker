@@ -2,7 +2,7 @@
 
 namespace jycr753\PasswordStrengthChecker;
 
-class PasswordStrengthController extends PasswordStrengthControllerAbstract
+class PasswordStrengthController extends PasswordStrengthAbstract
 {
     public function setPasswordScore($score)
     {
