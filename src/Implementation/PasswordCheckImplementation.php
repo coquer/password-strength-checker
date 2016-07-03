@@ -170,6 +170,7 @@ class PasswordCheckImplementation extends PasswordCheckAbstract
         if ($score > 0) {
             $result -= (int) ($score / (strlen($password['raw']) - $score)) + 1;
         }
+
         return $result;
     }
 }

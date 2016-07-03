@@ -50,7 +50,7 @@ class ServiceProvider extends IlluminateServiceProvider
 
     public static function check($password)
     {
-        $pci = new ServiceProvider(app());
+        $pci = new self(app());
         $pci->setSettings();
         $score = $pci->generatePasswordStrength($password);
         if ($score) {
@@ -60,7 +60,6 @@ class ServiceProvider extends IlluminateServiceProvider
                 'text' => $pci->getScoreText($score),
             ]);
         }
-        return null;
     }
 
     private function setSettings()
