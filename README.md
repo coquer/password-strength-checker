@@ -1,7 +1,6 @@
 # Strength Password Provider
 
-## Official Documentation
-
+## Documentation
 
 ## Contributing
 
@@ -21,7 +20,6 @@ Our projects follows the PSR-2 coding standard and the [PSR-4](https://github.co
  StyleCI automatically fixes code style to match the standard.
 
 ## License
-
 
 	Copyright 2016 Jorge Rodriguez(jycr753) and other contributors:
 	
