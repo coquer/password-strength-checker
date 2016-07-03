@@ -23,7 +23,7 @@ Publish the configuration files to customize the package:
 
 Import package in class
 
-   use jycr753\PasswordStrengthChecker\ServiceProvider as PSC;
+   `use jycr753\PasswordStrengthChecker\ServiceProvider as PSC;`
 
 Method usage Sample:
  
