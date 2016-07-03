@@ -2,14 +2,13 @@
 
 namespace jycr753\PasswordStrengthChecker;
 
-use jycr753\Models\Password;
+use jycr753\PasswordStrengthChecker\Models\Password;
 use jycr753\PasswordStrengthChecker\PasswordCheckImplementation as PCI;
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
 class ServiceProvider extends IlluminateServiceProvider
 {
     private $score;
-    private $as_text = false;
     private $order;
     private $messages;
 
@@ -45,23 +44,24 @@ class ServiceProvider extends IlluminateServiceProvider
 
     public static function check($password)
     {
-        self::setSettings();
-        $score = self::generatePasswordStrength($password);
+        $pci = new ServiceProvider(app());
+        $pci->setSettings();
+        $score = $pci->generatePasswordStrength($password);
         if ($score) {
             return new Password([
-                'score' => self::getPasswordStrength(),
-                'strength' => self::getPasswordScore(),
-                'text' => self::getPasswordStrength(),
+                'score' => $score,
+                'strength' => $pci->getPasswordStrength($score),
+                'text' => $pci->getScoreText($score),
             ]);
         }
+        return null;
     }
 
     private function setSettings()
     {
         $config = $this->config();
-        $this->as_text = $config['print_text'];
-        $this->order = $config['password_strength.order'];
-        $this->messages = $config['password_strength.response_text'];
+        $this->order = $config['order'];
+        $this->messages = $config['response_text'];
     }
 
     private function generatePasswordStrength($password)
@@ -119,19 +119,34 @@ class ServiceProvider extends IlluminateServiceProvider
         return $password_data;
     }
 
-    private function getPasswordStrength()
+    private function getPasswordStrength($score)
     {
-        $score = $this->getPasswordScore();
         if ($score <= 60) {
-            return ($this->as_text) ? $this->messages[Password::STRENGTH_VERY_WEAK] : Password::STRENGTH_VERY_WEAK;
+            return Password::STRENGTH_VERY_WEAK;
         } elseif ($score > 60 && $score <= 70) {
-            return ($this->as_text) ? $this->messages[Password::STRENGTH_WEAK] : Password::STRENGTH_WEAK;
+            return Password::STRENGTH_WEAK;
         } elseif ($score > 70 && $score <= 80) {
-            return ($this->as_text) ? $this->messages[Password::STRENGTH_FAIR] : Password::STRENGTH_FAIR;
+            return Password::STRENGTH_FAIR;
         } elseif ($score > 80 && $score <= 90) {
-            return ($this->as_text) ? $this->messages[Password::STRENGTH_STRONG] : Password::STRENGTH_STRONG;
+            return Password::STRENGTH_STRONG;
         } else {
-            return ($this->as_text) ? $this->messages[Password::STRENGTH_VERY_STRONG] : Password::STRENGTH_VERY_STRONG;
+            return Password::STRENGTH_VERY_STRONG;
+        }
+    }
+
+    public function getScoreText($score)
+    {
+        $messages = config('password_strength.response_text');
+        if ($score <= 60) {
+            return $messages[Password::STRENGTH_VERY_WEAK];
+        } elseif ($score > 60 && $score <= 70) {
+            return $messages[Password::STRENGTH_WEAK];
+        } elseif ($score > 70 && $score <= 80) {
+            return $messages[Password::STRENGTH_FAIR];
+        } elseif ($score > 80 && $score <= 90) {
+            return $messages[Password::STRENGTH_STRONG];
+        } else {
+            return $messages[Password::STRENGTH_VERY_STRONG];
         }
     }
 
@@ -147,6 +162,6 @@ class ServiceProvider extends IlluminateServiceProvider
 
     public function config()
     {
-        return $this->laravel->config['password_strength'];
+        return config('password_strength');
     }
 }

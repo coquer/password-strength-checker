@@ -29,4 +29,6 @@ abstract class PasswordCheckAbstract
     abstract public function doesHasSequentialUpperCase(array $password);
 
     abstract public function doesHasSequentialLowerCase(array $password);
+
+    abstract public function doesChartRepeats(array $password);
 }
