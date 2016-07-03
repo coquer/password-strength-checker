@@ -47,14 +47,13 @@ class ServiceProvider extends IlluminateServiceProvider
     {
         self::setSettings();
         $score = self::generatePasswordStrength($password);
-        if($score){
+        if ($score) {
             return new Password([
                 'score' => self::getPasswordStrength(),
                 'strength' => self::getPasswordScore(),
                 'text' => self::getPasswordStrength(),
             ]);
         }
-        return null;
     }
 
     private function setSettings()
@@ -64,7 +63,6 @@ class ServiceProvider extends IlluminateServiceProvider
         $this->order = $config['password_strength.order'];
         $this->messages = $config['password_strength.response_text'];
     }
-
 
     private function generatePasswordStrength($password)
     {
@@ -117,6 +115,7 @@ class ServiceProvider extends IlluminateServiceProvider
             (isset($passwordData['list'][$character]))
                 ? $passwordData['list'][$character]++ : $passwordData['list'][$character] = 1;
         }
+
         return $password_data;
     }
 

@@ -1,4 +1,5 @@
 <?php
+
 namespace jycr753\Models;
 
 class Password
