@@ -15,7 +15,7 @@ All bug fixes should be sent to the develop branch. Bug fixes should never be se
 If you discover a security vulnerability within Sherlock package, write an email to Ageras' development team.
 
 ### Coding Style
-Ageras' follows the PSR-2 coding standard and the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) autoloading standard.
+Our projects follows the PSR-2 coding standard and the [PSR-4](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md) autoloading standard.
 
 ### StyleCI
  StyleCI automatically fixes code style to match the standard.
