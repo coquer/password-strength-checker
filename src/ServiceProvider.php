@@ -124,6 +124,9 @@ class ServiceProvider extends IlluminateServiceProvider
         return $password_data;
     }
 
+    /**
+     * @param integer $score
+     */
     private function getPasswordStrength($score)
     {
         if ($score <= 60) {
@@ -139,6 +142,9 @@ class ServiceProvider extends IlluminateServiceProvider
         }
     }
 
+    /**
+     * @param integer $score
+     */
     public function getScoreText($score)
     {
         $messages = config('password_strength.response_text');
@@ -160,6 +166,9 @@ class ServiceProvider extends IlluminateServiceProvider
         return $this->score;
     }
 
+    /**
+     * @param integer $score
+     */
     private function setPasswordScore($score)
     {
         $this->score = $score;
